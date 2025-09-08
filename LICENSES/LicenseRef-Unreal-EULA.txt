@@ -1,0 +1,6 @@
+Any parts of this project that originate from or depend on Unreal Engine are governed 
+by the Unreal Engine End User License Agreement (EULA). This legal agreement applies 
+to all Unreal Engine–provided code, libraries, and assets.
+
+Official Unreal Engine EULA (latest version):
+    https://www.unrealengine.com/en-US/eula/unreal

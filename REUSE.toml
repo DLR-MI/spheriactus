@@ -1,0 +1,24 @@
+version = 3
+
+[[annotations]]
+path = ["Content/VRAnnotation/**", "Content/Characters/**", "Source/**", "README.md", "*.md", "*.png"]
+SPDX-FileCopyrightText = "Bruno Pereira Costa"
+SPDX-License-Identifier = "BSD-3-Clause"
+
+[[annotations]]
+path = "Plugins/LidarPointCloudPluginModified/**"
+precedence = "override"
+SPDX-FileCopyrightText = "Fab End User License Agreement (Fab EULA)"
+SPDX-License-Identifier = "LicenseRef-Fab-EULA"
+
+[[annotations]]
+path = ["Config/**", "Content/VRSpectator/**", "Spheriactus.uproject"]
+precedence = "override"
+SPDX-FileCopyrightText = "Unreal Engine End User License Agreement (EULA)"
+SPDX-License-Identifier = "LicenseRef-Unreal-EULA"
+
+[[annotations]]
+path = ["*.gitattributes", "*.gitignore", "*.gitmodules", "*.ignore", "*.vsconfig"]
+precedence = "override"
+SPDX-FileCopyrightText = "Ignore"
+SPDX-License-Identifier = "LicenseRef-Ignore"
