@@ -24,7 +24,7 @@
 2. Install **SteamVR** and ensure it is properly configured for your VR setup.
 3. Clone this repository and initialise submodules:
       ```
-      git clone --recurse-submodules https://github.com/DLR-MI/spheriactus.git
+      git clone --branch 5.5-public --recurse-submodules https://github.com/DLR-MI/spheriactus.git
       # Or, if you've already cloned:
       git submodule update --init --recursive
       ```
