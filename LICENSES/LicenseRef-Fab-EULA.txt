@@ -1,0 +1,6 @@
+Certain components of this project (for example, the LiDAR Point Cloud Plugin) are 
+governed by the Fab End User License Agreement. Use, modification, and distribution 
+of these components require adherence to the Fab EULA.
+
+Official Fab EULA (latest version):
+    https://www.fab.com/eula
