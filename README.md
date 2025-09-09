@@ -89,10 +89,23 @@ This program was developed and tested using the **Valve Index VR Kit**, and the 
 <img src="controllers_labelled.png" alt="Controllers Diagram" width=50%>  
 </div>  
 
+**Labelling:**  
+- Hold the **Label button** while performing sweeping motions with the right controller.  
+- Points currently highlighted by sphere tracing will be assigned the selected label as you "paint" over them in real time.  
+
+**Erasing Labels:**  
+- Hold the **Eraser button** while performing sweeping motions with the right controller.  
+- Highlighted points will have their labels removed in real time.  
+
+**Sphere Radius & Number of Traces:**  
+- Use the designated buttons to adjust the **selection area**.  
+- The tool relies on [sphere tracing](#sphere-tracing-explained) to highlight points.  
+  - Increasing the **Sphere Radius** enlarges each trace's influence area.  
+  - Increasing the **# Sphere Tracing** adds more secondary traces, broadening coverage.
+
 **Colour Source Modes:**  
 - **Data with Classification Alpha:** Displays points with their original colours when unlabelled. After labelling, points adopt their respective label colour.
-- **Classification:** Unlabelled points appear white, while labelled points retain their label colour (useful for spotting unlabelled points).  
-- **Sphere Radius and # Sphere Tracing:** These buttons control the selection area. The tool uses [**sphere tracing**](#sphere-tracing-explained) to detect and highlight points for labelling.  
+- **Classification:** Unlabelled points appear white, while labelled points retain their label colour (useful for spotting unlabelled points).
 
 ### Vertical Locomotion  
 Look up or down to move vertically.  
@@ -106,24 +119,26 @@ The tool performs sphere tracing to detect and label points. Here’s a quick br
 2. If a collision is detected, a sphere is placed at the hit location, highlighting all points inside.  
 3. Additional (secondary) traces are performed in a hexagonal pattern around the hit location for broader coverage. 
 4. Increasing **Sphere Radius** enlarges the selection area of each sphere.  
-5. Increasing **# Sphere Tracing** (number of sphere traces) adds more secondary traces - useful for increasing highlighted surface area.  
+5. Increasing **# Sphere Tracing** (number of sphere traces) adds more secondary traces (useful for increasing highlighted surface area).  
 
 
 ## Limitations  
-- **Point Limit:** Works with point clouds up to **150 million points.**  
-- **File Format:** Compatible with `.txt` files.  
-- **Labelled Point Clouds:** Imported labelled point clouds may display different label schemes. In the label dialog, make sure to create the same labels as the ones used in the imported labelled point cloud.  
-- **VR Compatibility:** Developed and tested exclusively with the **Valve Index VR Kit**. Compatibility with other VR kits has not been verified and may require additional setup or adjustments.  
-- **Blocking Operations:** Import and export run on the main thread. Depending on point cloud size and system performance, the editor may appear unresponsive for **5–10 minutes** during these operations.  
+- **Point Limit:** Works with point clouds up to **150 million points.**
+- **File Format:** Compatible with `.txt` files.
+- **Labelled Point Clouds:** Imported labelled point clouds may display different label schemes. In the label dialog, make sure to create the same labels as the ones used in the imported labelled point cloud.
+- **VR Compatibility:** Developed and tested exclusively with the **Valve Index VR Kit**. Compatibility with other VR kits has not been verified and may require additional setup or adjustments.
+- **Blocking Operations:** Import and export run on the main thread. Depending on point cloud size and system performance, the editor may appear unresponsive for **5–10 minutes** during these operations.
 - **Collision Building:** After import, collision data is built using a latent process. During this time the editor remains responsive (you can look around the scene) but **asset loading is deferred until collision building completes**, so expect another wait.
-- **Error Feedback:** Import errors may not always be clearly surfaced in the UI. Check the **Unreal Engine output log** for details if an import seems to fail.  
+- **Error Feedback:** Import errors may not always be clearly surfaced in the UI. Check the **Unreal Engine output log** for details if an import seems to fail.
+- **Sparse Point Clouds:** Labelling interaction based on sphere tracing is less precise on sparse point clouds. The tool performs best with **denser point clouds**, where sweeping motions highlight surfaces more consistently.
 
 ## Tips  
-- **Test with small files first:** Try importing a small point cloud before attempting larger datasets to verify your setup.  
-- **Monitor the output log:** Always keep the **Unreal Engine Output Log** open during import/export to catch warnings or errors early.  
-- **Be patient with large imports:** For very large point clouds, imports, exports, and collision building may take several minutes. The editor may look frozen - this is expected.  
-- **Label consistency:** When working with labelled point clouds, make sure to recreate labels with the same names and colours used in the imported file to avoid mismatches.  
-
+- **Test with small files first:** Try importing a small point cloud before attempting larger datasets to verify your setup.
+- **Monitor the output log:** Always keep the **Unreal Engine Output Log** open during import/export to catch warnings or errors early.
+- **Be patient with large imports:** For very large point clouds, imports, exports, and collision building may take several minutes. The editor may look frozen (this is expected).
+- **Label consistency:** When working with labelled point clouds, make sure to recreate labels with the same names and colours used in the imported file to avoid mismatches.
+- **Prefer denser point clouds:** For smoother labelling and erasing with sphere tracing, use denser datasets whenever possible.
+- **Controller orientation matters (multi-sphere tracing):** The labelling experience feels more natural when the controller is aimed **perpendicularly to the surface**. In this orientation, secondary sphere traces distribute more evenly across the surface, producing a denser and more consistent selection. At oblique angles, secondary traces are projected more sparsely, which can make the selection feel less continuous.
 
 ## License
 [(Back to top)](#table-of-contents)
