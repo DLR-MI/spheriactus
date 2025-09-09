@@ -119,7 +119,7 @@ The tool performs sphere tracing to detect and label points. Here’s a quick br
 2. If a collision is detected, a sphere is placed at the hit location, highlighting all points inside.  
 3. Additional (secondary) traces are performed in a hexagonal pattern around the hit location for broader coverage. 
 4. Increasing **Sphere Radius** enlarges the selection area of each sphere.  
-5. Increasing **# Sphere Tracing** (number of sphere traces) adds more secondary traces - useful for increasing highlighted surface area.  
+5. Increasing **# Sphere Tracing** (number of sphere traces) adds more secondary traces (useful for increasing highlighted surface area).  
 
 
 ## Limitations  
@@ -135,7 +135,7 @@ The tool performs sphere tracing to detect and label points. Here’s a quick br
 ## Tips  
 - **Test with small files first:** Try importing a small point cloud before attempting larger datasets to verify your setup.
 - **Monitor the output log:** Always keep the **Unreal Engine Output Log** open during import/export to catch warnings or errors early.
-- **Be patient with large imports:** For very large point clouds, imports, exports, and collision building may take several minutes. The editor may look frozen - this is expected.
+- **Be patient with large imports:** For very large point clouds, imports, exports, and collision building may take several minutes. The editor may look frozen (this is expected).
 - **Label consistency:** When working with labelled point clouds, make sure to recreate labels with the same names and colours used in the imported file to avoid mismatches.
 - **Prefer denser point clouds:** For smoother labelling and erasing with sphere tracing, use denser datasets whenever possible.
 - **Controller orientation matters (multi-sphere tracing):** The labelling experience feels more natural when the controller is aimed **perpendicularly to the surface**. In this orientation, secondary sphere traces distribute more evenly across the surface, producing a denser and more consistent selection. At oblique angles, secondary traces are projected more sparsely, which can make the selection feel less continuous.
